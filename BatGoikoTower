@@ -1,0 +1,25 @@
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main()
+    {
+        int N = int.Parse(Console.ReadLine());
+        for (int i = N; i > 0; i--)
+        {
+            Console.Write(new string('.', i - 1));
+            Console.Write("/");
+            if (((N - i) == 1) || ((N - i) == 3) || ((N - i) == 6) || ((N - i) == 10) || ((N - i) == 15) || ((N - i) == 21) || ((N - i) == 28) || ((N - i) == 36))
+            {
+                Console.Write(new string('-', (N - i) * 2));
+            }
+            else
+            {
+                Console.Write(new string('.', (N - i) * 2));
+            }
+            Console.Write("\\");
+            Console.WriteLine(new string('.', i - 1));
+        }
+    }
+}
